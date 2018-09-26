@@ -1,0 +1,10 @@
+{
+  "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "model": {
+      "description": "Generates model service",
+      "factory": "./model/index",
+      "schema": "./model/schema.json"
+    }
+  }
+}
