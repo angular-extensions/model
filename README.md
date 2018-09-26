@@ -2,7 +2,7 @@
 
 by [@tomastrajan](https://twitter.com/tomastrajan)
 
-[![npm](https://img.shields.io/npm/v/@angular-extensions/model.svg)](https://www.npmjs.com/package/@angular-extensions/model) [![npm](https://img.shields.io/npm/l/@angular-extensions/model.svg)](https://github.com/@angular-extensions/model/blob/master/LICENSE) [![npm](https://img.shields.io/npm/dm/@angular-extensions/model.svg)](https://www.npmjs.com/package/@angular-extensions/model) [![Build Status](https://travis-ci.org/@angular-extensions/model.svg?branch=master)](https://travis-ci.org/@angular-extensions/model) [![Twitter Follow](https://img.shields.io/twitter/follow/tomastrajan.svg?style=social&label=Follow)](https://twitter.com/tomastrajan)
+[![npm](https://img.shields.io/npm/v/angular-extensions/model.svg)](https://www.npmjs.com/package/angular-extensions/model) [![npm](https://img.shields.io/npm/l/angular-extensions/model.svg)](https://github.com/angular-extensions/model/blob/master/LICENSE) [![npm](https://img.shields.io/npm/dm/angular-extensions/model.svg)](https://www.npmjs.com/package/angular-extensions/model) [![Build Status](https://travis-ci.org/angular-extensions/model.svg?branch=master)](https://travis-ci.org/angular-extensions/model) [![Twitter Follow](https://img.shields.io/twitter/follow/tomastrajan.svg?style=social&label=Follow)](https://twitter.com/tomastrajan)
 
 Simple state management with minimalistic API, one way data flow,
 multiple model support and immutable data exposed as RxJS Observable.
@@ -12,7 +12,7 @@ multiple model support and immutable data exposed as RxJS Observable.
 - [StackBlitz Demo](https://stackblitz.com/github/tomastrajan/ngx-model-example)
 - [Demo & Documentation](http://tomastrajan.github.io/angular-model-pattern-example/)
 - [Blog Post](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87)
-- [Changelog](https://github.com/@angular-extensions/model/blob/master/CHANGELOG.md)
+- [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
 
 ![@angular-extensions/model dataflow diagram](https://raw.githubusercontent.com/tomastrajan/angular-model-pattern-example/master/src/assets/model_graph.png 'ngx-model dataflow diagram')
 
