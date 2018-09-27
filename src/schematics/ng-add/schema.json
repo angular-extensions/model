@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@angular-extensions/model/ng-add",
+  "title": "Add Angular model to the project",
+  "description": "NOTE: Does not work in the --dry-run mode",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "Skip installing after adding @angular-extensions/model",
+      "default": false
+    },
+    "name": {
+      "type": "string",
+      "description": "Project name.",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  }
+}

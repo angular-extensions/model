@@ -1,9 +1,15 @@
 {
   "$schema": "./node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
+    "ng-add": {
+      "description": "Add Angular model to the project",
+      "factory": "./ng-add",
+      "schema": "./ng-add/schema.json",
+      "hidden": true
+    },
     "model": {
       "description": "Generates model service",
-      "factory": "./model/index",
+      "factory": "./model",
       "schema": "./model/schema.json"
     }
   }
