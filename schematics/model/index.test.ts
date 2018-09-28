@@ -61,6 +61,16 @@ describe('Schematic: Model', () => {
     );
   });
 
+  it('should create a model service in first project if no project was provided', () => {
+    const options = { ...defaultOptions, project: undefined };
+
+    const tree = runner.runSchematic('model', options, appTree);
+    assert(tree.files.includes('/projects/bar/src/app/foo/foo.service.ts'));
+    assert(
+      tree.files.includes('/projects/bar/src/app/foo/foo.service.spec.ts')
+    );
+  });
+
   it('should create a model service respecting path as part of name', () => {
     const options = { ...defaultOptions, name: 'path/foo' };
 

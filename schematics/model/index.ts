@@ -29,10 +29,10 @@ import { Schema as ModelServiceOptions } from './schema';
 export default function(options: ModelServiceOptions): Rule {
   return (host: Tree, _context: SchematicContext) => {
     const workspace = getWorkspace(host);
-    if (!options.project) {
-      throw new SchematicsException('Option (project) is required.');
-    }
-    const project = workspace.projects[options.project];
+    const projectName = options.project
+      ? options.project
+      : Object.keys(workspace.projects)[0];
+    const project = workspace.projects[projectName];
 
     if (options.path === undefined) {
       options.path = buildDefaultPath(project);
