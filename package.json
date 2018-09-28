@@ -24,7 +24,7 @@
       "comments": "none"
     }
   },
-  "schematics": "schematics/collection.json",
+  "schematics": "./schematics/collection.json",
   "peerDependencies": {
     "@angular/core": ">=6.0.0",
     "rxjs": "^6.1.0",
