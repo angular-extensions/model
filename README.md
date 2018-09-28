@@ -21,33 +21,10 @@ multiple model support and immutable data exposed as RxJS Observable.
 1.  Install `@angular-extensions/model`
 
     ```
-    npm install --save @angular-extensions/model
-    ```
-
-    or
-
-    ```
-    yarn add @angular-extensions/model
-    ```
-
-    or
-
-    ```
     ng add @angular-extensions/model
     ```
 
-2.  Import and use `ModelModule` in you `AppModule` (or `CoreModule`)
-
-    ```ts
-    import { ModelModule } from '@angular-extensions/model';
-
-    @NgModule({
-      imports: [NgxModelModule]
-    })
-    export class CoreModule {}
-    ```
-
-3.  Import and use `Model` and `ModelFactory` in your own services.
+2.  Import and use `Model` and `ModelFactory` in your own services or generate new service using schematics (see below)
 
     ```ts
     import { Injectable } from '@angular/core';
@@ -96,37 +73,22 @@ multiple model support and immutable data exposed as RxJS Observable.
           selector: 'model-todos',
           templateUrl: `
             /* ... */
-            <h1>Todos ({{count}})</h1>
-            <ul>
-              <!-- template subscription to todos using async pipe -->
-              <li *ngFor="let todo of todosService.todos$ | async" (click)="onTodoClick(todo)">
-                {{todo.name}}
-              </li>
-            </ul>
+            <!-- template subscription to todos using async pipe -->
+            <ng-container *ngId="todosService.todos$ | async as todos">
+              <h1>Todos ({{todos.count}})</h1>
+              <ul>
+                <li *ngFor="let todo of todos" (click)="onTodoClick(todo)">
+                  {{todo.name}}
+                </li>
+              </ul>
+            </ng-container>
           `,
         })
-        export class TodosComponent implements OnInit, OnDestroy {
-
-          private unsubscribe$: Subject<void> = new Subject<void>();
+        export class TodosComponent implements OnInit {
 
           count: number;
 
           constructor(public todosService: TodosService) {}
-
-          ngOnInit() {
-            // explicit subscription to todos to get count
-            this.todosService.todos
-              .pipe(
-                takeUntil(this.unsubscribe$) // declarative unsubscription
-              )
-              .subscribe(todos => this.count = todos.length);
-          }
-
-          ngOnDestroy(): void {
-            // for declarative unsubscription
-            this.unsubscribe$.next();
-            this.unsubscribe$.complete();
-          }
 
           onTodoClick(todo: Todo) {
             this.todosService.toggleTodo(todo.id);
@@ -150,7 +112,7 @@ Multiple model factories are provided out of the box to support different use ca
 
 This is a library version of [Angular Model Pattern](https://tomastrajan.github.io/angular-model-pattern-example).
 All the original examples and documentation are still valid. The only difference is that
-you can install `@angular-extensions/model` from npm instead of having to copy model pattern
+you can add `@angular-extensions/model`  with `ng add` instead of having to copy model pattern
 implementation to your project manually.
 
 Check out the [Blog Post](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) and
@@ -159,4 +121,6 @@ for more how-tos and examples.
 
 ## Getting started with Schematics
 
-TODO
+The `@angular-extensions/model` comes with schematics out of the box!
+Run `ng g @angular-extensions/model:model path/to/my-model` to generate model service and corresponding tests.
+Use `--items` flag if you want ot generate model service for a collection
