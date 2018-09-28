@@ -1,4 +1,12 @@
+import fs from 'fs';
+import path from 'path';
 import { Tree } from '@angular-devkit/schematics';
+
+export function getLibraryVersion() {
+  return JSON.parse(
+    fs.readFileSync(path.join(__dirname, '../package.json'), 'utf8')
+  ).version;
+}
 
 export function addPackageToPackageJson(
   host: Tree,
