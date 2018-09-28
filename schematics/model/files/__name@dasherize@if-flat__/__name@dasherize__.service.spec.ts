@@ -5,10 +5,9 @@ import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
 
 describe('<%= classify(name) %>Service', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      imports: [NgxModelModule],
+    TestBed.configureTestingModule(<% if(module) { %>{
       providers: [<%= classify(name) %>Service]
-    });
+    }<% } else { %>{}<% } %>});
   });
 
   it('should be created',
