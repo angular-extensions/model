@@ -65,12 +65,12 @@
   ],
   "author": "Tomas Trajan <@tomastrajan>",
   "license": "MIT",
-  "homepage": "https://github.com/@angular-extensions/model#readme",
+  "homepage": "https://github.com/angular-extensions/model#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/@angular-extensions/model.git"
+    "url": "git+https://github.com/angular-extensions/model.git"
   },
   "bugs": {
-    "url": "https://github.com/@angular-extensions/model/issues"
+    "url": "https://github.com/angular-extensions/model/issues"
   }
 }

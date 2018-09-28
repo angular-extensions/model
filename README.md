@@ -2,7 +2,7 @@
 
 by [@tomastrajan](https://twitter.com/tomastrajan)
 
-[![npm](https://img.shields.io/npm/v/angular-extensions/model.svg)](https://www.npmjs.com/package/angular-extensions/model) [![npm](https://img.shields.io/npm/l/angular-extensions/model.svg)](https://github.com/angular-extensions/model/blob/master/LICENSE) [![npm](https://img.shields.io/npm/dm/angular-extensions/model.svg)](https://www.npmjs.com/package/angular-extensions/model) [![Build Status](https://travis-ci.org/angular-extensions/model.svg?branch=master)](https://travis-ci.org/angular-extensions/model) [![Twitter Follow](https://img.shields.io/twitter/follow/tomastrajan.svg?style=social&label=Follow)](https://twitter.com/tomastrajan)[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
+[![npm](https://img.shields.io/npm/v/@angular-extensions/model.svg)](https://www.npmjs.com/package/@angular-extensions/model) [![npm](https://img.shields.io/npm/l/@angular-extensions/model.svg)](https://github.com/angular-extensions/model/blob/master/LICENSE) [![npm](https://img.shields.io/npm/dm/@angular-extensions/model.svg)](https://www.npmjs.com/package/@angular-extensions/model) [![Build Status](https://travis-ci.org/angular-extensions/model.svg?branch=master)](https://travis-ci.org/angular-extensions/model) [![Twitter Follow](https://img.shields.io/twitter/follow/tomastrajan.svg?style=social&label=Follow)](https://twitter.com/tomastrajan)[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 Simple state management with minimalistic API, one way data flow,
 multiple model support and immutable data exposed as RxJS Observable.
