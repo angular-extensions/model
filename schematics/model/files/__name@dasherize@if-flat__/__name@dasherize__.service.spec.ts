@@ -1,5 +1,4 @@
 import { TestBed, inject, async } from '@angular/core/testing';
-import { NgxModelModule } from '@angular-extensions/model';
 
 import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
 
@@ -7,7 +6,7 @@ describe('<%= classify(name) %>Service', () => {
   beforeEach(() => {
     TestBed.configureTestingModule(<% if(module) { %>{
       providers: [<%= classify(name) %>Service]
-    }<% } else { %>{}<% } %>});
+    }<% } else { %>{}<% } %>);
   });
 
   it('should be created',
