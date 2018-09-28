@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.8"></a>
+## [6.0.8](https://github.com/@angular-extensions/model/compare/v6.0.7...v6.0.8) (2018-09-28)
+
+
+### Bug Fixes
+
+* **schematics:** testing template syntax, remove unused import ([3f134a0](https://github.com/@angular-extensions/model/commit/3f134a0))
+
+
+
 <a name="6.0.7"></a>
 ## [6.0.7](https://github.com/@angular-extensions/model/compare/v6.0.6...v6.0.7) (2018-09-28)
 
