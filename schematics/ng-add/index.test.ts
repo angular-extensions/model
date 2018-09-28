@@ -7,7 +7,7 @@ import {
 import { Schema as ApplicationOptions } from '@schematics/angular/application/schema';
 import { Schema as WorkspaceOptions } from '@schematics/angular/workspace/schema';
 
-import packageJson from '../../../package.json';
+import packageJson from '../../package.json';
 
 import { Schema as NgAddOptions } from './schema';
 

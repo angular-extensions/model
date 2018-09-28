@@ -1,7 +1,7 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 import { NodePackageInstallTask } from '@angular-devkit/schematics/tasks';
 
-import packageJson from '../../../package.json';
+import packageJson from '../../package.json';
 import { addPackageToPackageJson } from '../utils';
 
 import { Schema as NgAddOptions } from './schema';

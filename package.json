@@ -2,25 +2,25 @@
   "name": "@angular-extensions/model",
   "version": "6.0.0",
   "description": "Angular Model - Simple state management with minimalistic API, one way data flow, multiple model support and immutable data exposed as RxJS Observable.",
-  "main": "src/model/model.ts",
+  "main": "lib/model/model.ts",
   "scripts": {
     "clean": "rm -rf dist && rm -rf .ng_pkg_build && rm -f dist.tgz",
-    "lint": "tslint src/**/*.ts -e src/**/files/**",
+    "lint": "tslint {lib,schematics}/**/*.ts -e schematics/**/files/**",
     "test": "npm run lint && npm run format:test && npm run lib:test && npm run schm:test",
     "build": "npm run clean && npm run lib:build && npm run schm:build",
     "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist",
     "format": "prettier **/*.{ts,json,md} --write",
     "format:test": "prettier **/*.{ts,json,md} --list-different",
     "lib:build": "ng-packagr -p package.json",
-    "lib:test": "mocha src/model/model.test.ts --require ts-node/register",
+    "lib:test": "mocha lib/model/model.test.ts --require ts-node/register",
     "lib:watch": "npm run lib:test -- --watch-extensions ts --watch",
-    "schm:build": "tsc -p src/schematics/tsconfig.json && cpx src/**/{collection,schema}.json dist",
-    "schm:test": "mocha src/schematics/**/*.test.ts --require ts-node/register",
+    "schm:build": "tsc -p tsconfig.schematics.json && cpx schematics/**/{collection,schema}.json dist/schematics",
+    "schm:test": "mocha schematics/**/*.test.ts --require ts-node/register",
     "schm:watch": "npm run schm:test -- --watch-extensions ts --watch"
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "src/model/model.ts",
+      "entryFile": "lib/model/model.ts",
       "comments": "none"
     }
   },
