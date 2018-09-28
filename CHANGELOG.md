@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.6"></a>
+## [6.0.6](https://github.com/@angular-extensions/model/compare/v6.0.5...v6.0.6) (2018-09-28)
+
+
+### Bug Fixes
+
+* **schematics:** don't override ng-packagr generated package.json during build ([66e4d9b](https://github.com/@angular-extensions/model/commit/66e4d9b))
+
+
+
 <a name="6.0.5"></a>
 ## [6.0.5](https://github.com/@angular-extensions/model/compare/v6.0.4...v6.0.5) (2018-09-28)
 
