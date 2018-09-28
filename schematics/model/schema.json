@@ -32,7 +32,7 @@
     },
     "flat": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "Flag to indicate if a dir is created."
     },
     "spec": {
@@ -52,6 +52,5 @@
       "alias": "i"
     }
   },
-  "required": ["name"],
   "additionalProperties": false
 }
