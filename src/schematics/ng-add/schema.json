@@ -9,13 +9,8 @@
       "type": "boolean",
       "description": "Skip installing after adding @angular-extensions/model",
       "default": false
-    },
-    "name": {
-      "type": "string",
-      "description": "Project name.",
-      "$default": {
-        "$source": "projectName"
-      }
     }
-  }
+  },
+  "required": [],
+  "additionalProperties": false
 }

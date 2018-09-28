@@ -17,6 +17,7 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strictNullChecks": true,
+    "resolveJsonModule": true,
     "target": "es6",
     "types": ["node", "mocha"]
   },

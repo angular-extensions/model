@@ -1,5 +1,5 @@
-import * as assert from 'assert';
-import * as path from 'path';
+import assert from 'assert';
+import path from 'path';
 import {
   SchematicTestRunner,
   UnitTestTree
@@ -36,7 +36,7 @@ const runner = new SchematicTestRunner('schematics', collectionPath);
 
 let appTree: UnitTestTree;
 
-describe('Model Schematic', () => {
+describe('Schematic: Model', () => {
   beforeEach(() => {
     appTree = runner.runExternalSchematic(
       '@schematics/angular',
@@ -114,7 +114,7 @@ describe('Model Schematic', () => {
     const content = tree.readContent(
       '/projects/bar/src/app/foo/foo.service.ts'
     );
-    assert(content.includes("providedIn: 'root'"));
+    assert(content.includes(`providedIn: 'root'`));
   });
 
   it('should not be tree-shakeable if module is set', () => {
@@ -124,7 +124,7 @@ describe('Model Schematic', () => {
     const content = tree.readContent(
       '/projects/bar/src/app/foo/foo.service.ts'
     );
-    assert(!content.includes("providedIn: 'root'"));
+    assert(!content.includes(`providedIn: 'root'`));
   });
 
   it('should create model interface', () => {
@@ -152,7 +152,7 @@ describe('Model Schematic', () => {
 
     const tree = runner.runSchematic('model', options, appTree);
     const content = tree.readContent('/projects/bar/src/app/app.module.ts');
-    assert(!content.includes("import { FooService } from './foo/foo.service'"));
+    assert(!content.includes(`import { FooService } from './foo/foo.service'`));
   });
 
   it('should import into a specified module', () => {
@@ -160,7 +160,7 @@ describe('Model Schematic', () => {
 
     const tree = runner.runSchematic('model', options, appTree);
     const content = tree.readContent('/projects/bar/src/app/app.module.ts');
-    assert(content.includes("import { FooService } from './foo/foo.service'"));
+    assert(content.includes(`import { FooService } from './foo/foo.service'`));
   });
 
   it('should fail if specified module does not exist', () => {
