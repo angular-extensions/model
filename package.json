@@ -8,7 +8,7 @@
     "lint": "tslint {lib,schematics}/**/*.ts -e **/files/**",
     "test": "npm run lint && npm run format:test && npm run lib:test && npm run schm:test",
     "build": "npm run clean && npm run lib:build && npm run schm:build",
-    "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist",
+    "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist --access public",
     "format": "prettier **/*.{ts,json,md} --write",
     "format:test": "prettier **/*.{ts,json,md} --list-different",
     "lib:build": "ng-packagr -p package.json",
