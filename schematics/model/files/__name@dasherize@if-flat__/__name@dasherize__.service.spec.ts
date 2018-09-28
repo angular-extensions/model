@@ -1,5 +1,5 @@
 import { TestBed, inject, async } from '@angular/core/testing';
-import { NgxModelModule } from 'ngx-model';
+import { NgxModelModule } from '@angular-extensions/model';
 
 import { <%= classify(name) %>Service } from './<%= dasherize(name) %>.service';
 

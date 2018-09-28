@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Model, ModelFactory } from 'ngx-model';
+import { Model, ModelFactory } from '@angular-extensions/model';
 import { Observable } from 'rxjs';
 
 const initialData: <%= classify(name) %><% if(items) { %>[]<% } %> = <% if(items) { %>[]<% } else { %>{ prop: 'value' }<% } %>;

@@ -15,7 +15,13 @@ export default function(options: NgAddOptions): Rule {
       `✅️ Added "@angular-extensions/model@^${version}" into dependencies`
     );
 
-    if (!options.skipInstall) {
+    if (options.skipInstall) {
+      context.logger.log(
+        'warn',
+        `⚠️️ The "--skip-install" flag was present, don't forget to install package manually`
+      );
+    } else {
+      context.logger.log('info', `✅️ Installing added packages...`);
       context.addTask(new NodePackageInstallTask());
     }
     return host;
