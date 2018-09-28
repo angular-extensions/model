@@ -59,7 +59,7 @@ multiple model support and immutable data exposed as RxJS Observable.
     }
     ```
 
-4.  Use service in your component. Import and inject service into components constructor.
+3.  Use service in your component. Import and inject service into components constructor.
     Subscribe to services data in template `todosService.todos$ | async`
     or explicitly `this.todosService.todos$.subscribe(todos => { /* ... */ })`
 
@@ -112,7 +112,7 @@ Multiple model factories are provided out of the box to support different use ca
 
 This is a library version of [Angular Model Pattern](https://tomastrajan.github.io/angular-model-pattern-example).
 All the original examples and documentation are still valid. The only difference is that
-you can add `@angular-extensions/model`  with `ng add` instead of having to copy model pattern
+you can add `@angular-extensions/model` with `ng add` instead of having to copy model pattern
 implementation to your project manually.
 
 Check out the [Blog Post](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) and
