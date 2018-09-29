@@ -7,8 +7,10 @@ by [@tomastrajan](https://twitter.com/tomastrajan)
 Simple state management with minimalistic API, one way data flow,
 multiple model support and immutable data exposed as RxJS Observable.
 
-- [Live Demo (Stackblitz)](https://stackblitz.com/edit/angular-extensions-model?file=src%2Fapp%2Ftodo%2Ftodo.service.ts)
-- [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
+* [Live Demo (Stackblitz)](https://stackblitz.com/edit/angular-extensions-model?file=src%2Fapp%2Ftodo%2Ftodo.service.ts)
+* [Getting Started](#getting-started-in-angular-cli-projects)
+* [Code of Conduct](https://github.com/angular-extensions/model/blob/master/CODE_OF_CONDUCT.md)
+* [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
 
 ## Documentation
 
@@ -169,3 +171,7 @@ implementation to your project manually.
 Check out the [Blog Post](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) and
 [Advanced Usage Patterns](https://tomastrajan.github.io/angular-model-pattern-example#/advanced)
 for more how-tos and examples.
+
+
+## Contributing
+Please, feel free to submit and [issue]() or [feature request]() using project GitHub [repository]().
