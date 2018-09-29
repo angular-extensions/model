@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.0.11"></a>
+## [6.0.11](https://github.com/angular-extensions/model/compare/v6.0.10...v6.0.11) (2018-09-29)
+
+
+### Bug Fixes
+
+* **docs:** add live demo url ([01007b7](https://github.com/angular-extensions/model/commit/01007b7))
+
+
+
 <a name="6.0.10"></a>
 ## [6.0.10](https://github.com/angular-extensions/model/compare/v6.0.9...v6.0.10) (2018-09-29)
 
