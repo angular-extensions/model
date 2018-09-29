@@ -7,6 +7,7 @@ by [@tomastrajan](https://twitter.com/tomastrajan)
 Simple state management with minimalistic API, one way data flow,
 multiple model support and immutable data exposed as RxJS Observable.
 
+- [Live Demo (Stackblitz)](https://stackblitz.com/edit/angular-extensions-model?file=src%2Fapp%2Ftodo%2Ftodo.service.ts)
 - [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
 
 ## Documentation
