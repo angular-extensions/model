@@ -10,6 +10,7 @@ multiple model support and immutable data exposed as RxJS Observable.
 * [Live Demo (Stackblitz)](https://stackblitz.com/edit/angular-extensions-model?file=src%2Fapp%2Ftodo%2Ftodo.service.ts)
 * [Getting Started](#getting-started-in-angular-cli-projects)
 * [Code of Conduct](https://github.com/angular-extensions/model/blob/master/CODE_OF_CONDUCT.md)
+* [Contributing](https://github.com/angular-extensions/model/blob/master/CONTRIBUTING.md)
 * [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
 
 ## Documentation
@@ -174,4 +175,5 @@ for more how-tos and examples.
 
 
 ## Contributing
-Please, feel free to submit and [issue]() or [feature request]() using project GitHub [repository]().
+Please, feel free to submit and [issue](https://github.com/angular-extensions/model/issues/new?template=----bug-report.md) 
+or [feature request](https://github.com/angular-extensions/model/issues/new?template=--feature-request.md) using project GitHub [repository](https://github.com/angular-extensions/model).
