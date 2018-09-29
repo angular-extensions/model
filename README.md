@@ -12,7 +12,7 @@ multiple model support and immutable data exposed as RxJS Observable.
 - [Code of Conduct](https://github.com/angular-extensions/model/blob/master/CODE_OF_CONDUCT.md)
 - [Contributing](https://github.com/angular-extensions/model/blob/master/CONTRIBUTING.md)
 - [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
-- [Blog](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) about introduction to Angular Model Pattern 
+- [Blog](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) about introduction to Angular Model Pattern
 - [Advanced Usage Patterns](https://tomastrajan.github.io/angular-model-pattern-example#/advanced) with more how-tos and examples
 
 ## Documentation
@@ -174,12 +174,26 @@ implementation to your project manually.
 One of the changes compared to `ngx-model` is that the `@angular-extensions/model` uses new
 `providedIn: 'root'` syntax (since Angular 6) so that we don't need to import `NgxModelModule`
 or anything similar to register `ModelFactory` into Angular dependency injection (DI) context.
-All we have to do is to import `ModelFactory` in the constructor of at least one service in our 
+All we have to do is to import `ModelFactory` in the constructor of at least one service in our
 application like this `constructor(private modelFactory: ModelFactory<SomeType[]>) {}` and we're
 good to go. This new feature is called tree-shakeable providers:
 
 > There is now a new, recommended, way to register a provider, directly inside the @Injectable() decorator, using the new providedIn attribute. It accepts 'root' as a value or any module of your application. When you use 'root', your injectable will be registered as a singleton in the application, and you don’t need to add it to the providers of the root module. Similarly, if you use providedIn: UsersModule, the injectable is registered as a provider of the UsersModule without adding it to the providers of the module ([source](https://blog.ninja-squad.com/2018/05/04/what-is-new-angular-6/))
 
+#### Migration from `ngx-model`
+
+Migration should be rather simple, please follow these steps:
+
+1. remove dependency to `ngx-model`
+2. install `npm i -S @angular-extensions/model`
+3. remove `NgxModelModule` from imports of your `@NgModule` in `App` or `Core` module based on where you added it
+4. search and replace imports from `ngx-model` and replace them with `@angular-extensions/model`
+5. this should be it! The API didn't change so this should be all that it takes to migrate to the new package
+6. (optional) refactor your existing model services to use `@Injectable({ providedIn: 'root' })` (or other module instead of `root`)
+   instead of `@Injectable()` and remove them from `@NgModule({ providers: [MyModelService] })` of your modules
+
+The 6th step depends on your preferences, it is still possible to use new `@angular-extensions/model` with classic
+providers, just use `--module <relative-path-to-module>` flag when generating new model services using schematics
 
 ## Contributing
 
