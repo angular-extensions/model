@@ -1,7 +1,6 @@
 ---
-name: "✨ Feature request"
+name: '✨ Feature request'
 about: Suggest a new feature or idea for this project
-
 ---
 
 ## Describe the feature you'd like:

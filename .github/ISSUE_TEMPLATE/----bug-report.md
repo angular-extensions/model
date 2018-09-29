@@ -1,7 +1,6 @@
 ---
 name: " \U0001F41B Bug report"
 about: Something isn't working correctly
-
 ---
 
 <!--
