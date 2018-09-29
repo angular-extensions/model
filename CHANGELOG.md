@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="6.1.0"></a>
+# [6.1.0](https://github.com/angular-extensions/model/compare/v6.0.11...v6.1.0) (2018-09-29)
+
+
+### Bug Fixes
+
+* **docs:** enhance readme ([689a3a1](https://github.com/angular-extensions/model/commit/689a3a1))
+
+
+### Features
+
+* **docs:** add migration from ngx-model section ([f524e79](https://github.com/angular-extensions/model/commit/f524e79))
+
+
+
 <a name="6.0.11"></a>
 ## [6.0.11](https://github.com/angular-extensions/model/compare/v6.0.10...v6.0.11) (2018-09-29)
 
