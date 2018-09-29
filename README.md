@@ -1,4 +1,4 @@
-# The Angular Model - @angular-extensions/model
+# Angular Model - @angular-extensions/model
 
 by [@tomastrajan](https://twitter.com/tomastrajan)
 

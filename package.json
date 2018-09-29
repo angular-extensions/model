@@ -60,8 +60,9 @@
     "rxjs",
     "observable",
     "immutable",
-    "one way data flow",
-    "typescript"
+    "typescript",
+    "schematics",
+    "angular cli"
   ],
   "author": "Tomas Trajan <@tomastrajan>",
   "license": "MIT",
