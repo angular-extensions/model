@@ -17,7 +17,7 @@ multiple model support and immutable data exposed as RxJS Observable.
 
 ## Documentation
 
-![@angular-extensions/model dataflow diagram](https://raw.githubusercontent.com/tomastrajan/angular-model-pattern-example/master/src/assets/model_graph.png 'ngx-model dataflow diagram')
+![@angular-extensions/model dataflow diagram](https://raw.githubusercontent.com/angular-extensions/model/master/assets/model_graph.png 'model dataflow diagram')
 
 ## Getting started in Angular CLI projects
 
@@ -115,6 +115,8 @@ ng g @angular-extensions/model:model example/todo
 - `--spec` - generate service test file (default: `true`)
 - `--module` - will decide how to register service into Angular dependency injection context (service will use `providedIn: 'root'` when no module was provided, module can be provided as a path to module relative to the location of generated service, eg `ng g @angular-extensions/model:model examples/auth --module ../app.module.ts`)
 - `--project` - project in which to generate the service (for multi project Angular CLI workspaces, will generate service in the first project by default, when no project was provided)
+
+![@angular-extensions/schematics](https://raw.githubusercontent.com/angular-extensions/model/master/assets/schematics.gif 'schematics animation')
 
 ## Getting started without Angular CLI
 
