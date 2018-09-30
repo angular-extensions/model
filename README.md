@@ -12,8 +12,9 @@ multiple model support and immutable data exposed as RxJS Observable.
 - [Code of Conduct](https://github.com/angular-extensions/model/blob/master/CODE_OF_CONDUCT.md)
 - [Contributing](https://github.com/angular-extensions/model/blob/master/CONTRIBUTING.md)
 - [Changelog](https://github.com/angular-extensions/model/blob/master/CHANGELOG.md)
-- [Blog](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) about introduction to Angular Model Pattern
+- [Documentation](https://tomastrajan.github.io/angular-model-pattern-example) website
 - [Advanced Usage Patterns](https://tomastrajan.github.io/angular-model-pattern-example#/advanced) with more how-tos and examples
+- [Blog](https://medium.com/@tomastrajan/model-pattern-for-angular-state-management-6cb4f0bfed87) about introduction to Angular Model Pattern
 
 ## Documentation
 
