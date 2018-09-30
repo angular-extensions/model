@@ -1,6 +1,6 @@
 {
   "name": "@angular-extensions/model",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Angular Model - Simple state management with minimalistic API, one way data flow, multiple model support and immutable data exposed as RxJS Observable.",
   "main": "lib/model/model.ts",
   "scripts": {
