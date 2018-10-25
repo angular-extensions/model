@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.0.0"></a>
+# [7.0.0](https://github.com/angular-extensions/model/compare/v6.1.2...v7.0.0) (2018-10-25)
+
+
+### Features
+
+* **dependencies:** update to Angular 7, Rxjs 6.3 and Typescript 3.1 ([5fc45e2](https://github.com/angular-extensions/model/commit/5fc45e2))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** - peer depenencies updated to work in Angular 7 ecosystem
+
+
+
 <a name="6.1.2"></a>
 ## [6.1.2](https://github.com/angular-extensions/model/compare/v6.1.1...v6.1.2) (2018-09-30)
 
