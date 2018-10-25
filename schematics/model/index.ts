@@ -17,7 +17,10 @@ import {
 import * as ts from 'typescript';
 import { strings } from '@angular-devkit/core';
 import { getWorkspace } from '@schematics/angular/utility/config';
-import { buildDefaultPath } from '@schematics/angular/utility/project';
+import {
+  buildDefaultPath,
+  getProject
+} from '@schematics/angular/utility/project';
 import { buildRelativePath } from '@schematics/angular/utility/find-module';
 import { addProviderToModule } from '@schematics/angular/utility/ast-utils';
 import { parseName } from '@schematics/angular/utility/parse-name';
@@ -32,7 +35,7 @@ export default function(options: ModelServiceOptions): Rule {
     const projectName = options.project
       ? options.project
       : Object.keys(workspace.projects)[0];
-    const project = workspace.projects[projectName];
+    const project = getProject(host, projectName);
 
     if (options.path === undefined) {
       options.path = buildDefaultPath(project);
