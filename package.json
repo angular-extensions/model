@@ -26,7 +26,8 @@
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/core": ">=7.0.0",
+    "@angular/core": "^7.0.0",
+    "@angular/cli": "^7.0.0",
     "rxjs": "^6.3.0",
     "typescript": "~3.1.0"
   },
