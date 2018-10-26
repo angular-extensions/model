@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.0.1"></a>
+## [7.0.1](https://github.com/angular-extensions/model/compare/v7.0.0...v7.0.1) (2018-10-26)
+
+
+### Bug Fixes
+
+* **dependencies:** add [@angular](https://github.com/angular)/cli ^7.0.0 as peer dependency ([5709f97](https://github.com/angular-extensions/model/commit/5709f97))
+
+
+
 <a name="7.0.0"></a>
 # [7.0.0](https://github.com/angular-extensions/model/compare/v6.1.2...v7.0.0) (2018-10-25)
 
