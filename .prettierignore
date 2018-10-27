@@ -1,3 +1,5 @@
 schematics/**/files/
 dist/
+coverage/
+.nyc_output/
 CHANGELOG.md

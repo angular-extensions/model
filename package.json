@@ -4,10 +4,12 @@
   "description": "Angular Model - Simple state management with minimalistic API, one way data flow, multiple model support and immutable data exposed as RxJS Observable.",
   "main": "lib/model/model.ts",
   "scripts": {
-    "clean": "rm -rf dist && rm -rf .ng_pkg_build && rm -f dist.tgz",
+    "clean": "rm -rf dist coverage .nyc_output .ng_pkg_build && rm -f dist.tgz",
     "lint": "tslint {lib,schematics}/**/*.ts -e **/files/**",
     "test": "npm run lint && npm run format:test && npm run lib:test && npm run schm:test",
     "build": "npm run clean && npm run lib:build && npm run schm:build",
+    "coverage": "nyc mocha {lib,schematics}/**/*.test.ts --require ts-node/register --require source-map-support/register",
+    "ci": "npm run lint && npm run format:test && npm run coverage",
     "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist --access public",
     "format": "prettier **/*.{ts,json,md} --write",
     "format:test": "prettier **/*.{ts,json,md} --list-different",
@@ -17,6 +19,16 @@
     "schm:build": "tsc -p tsconfig.schematics.json && cpx schematics/**/{collection.json,schema.json,files/**} dist/schematics",
     "schm:test": "mocha schematics/**/*.test.ts --require ts-node/register",
     "schm:watch": "npm run schm:test -- --watch-extensions ts --watch"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ],
+    "reporter": [
+      "json",
+      "html",
+      "text-summary"
+    ]
   },
   "ngPackage": {
     "lib": {
@@ -44,9 +56,11 @@
     "cpx": "^1.5.0",
     "mocha": "^5.1.1",
     "ng-packagr": "^4.4.0",
+    "nyc": "^13.1.0",
     "prettier": "^1.14.3",
     "rxjs": "^6.3.0",
     "sinon": "^4.5.0",
+    "source-map-support": "^0.5.9",
     "standard-version": "^4.3.0",
     "ts-node": "^7.0.1",
     "tsickle": "~0.27.0",

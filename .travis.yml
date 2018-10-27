@@ -3,7 +3,10 @@ node_js:
 - "9"
 dist: trusty
 install:
-- npm i -g npm@6.0.1
-- npm ci
+  - npm i -g npm@latest
+  - npm install codecov -g
+  - npm ci
 script:
-  - npm test
+  - npm run ci
+after_success:
+  - codecov

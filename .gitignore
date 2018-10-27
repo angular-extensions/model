@@ -1,5 +1,7 @@
 # Outputs
 dist/
+coverage/
+.nyc_output
 
 # IDEs
 .idea/
