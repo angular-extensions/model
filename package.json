@@ -6,10 +6,9 @@
   "scripts": {
     "clean": "rm -rf dist coverage .nyc_output .ng_pkg_build && rm -f dist.tgz",
     "lint": "tslint {lib,schematics}/**/*.ts -e **/files/**",
-    "test": "npm run lint && npm run format:test && npm run lib:test && npm run schm:test",
+    "test": "npm run lint && npm run format:test && nyc mocha {lib,schematics}/**/*.test.ts --require ts-node/register --require source-map-support/register",
     "build": "npm run clean && npm run lib:build && npm run schm:build",
-    "coverage": "nyc mocha {lib,schematics}/**/*.test.ts --require ts-node/register --require source-map-support/register",
-    "ci": "npm run lint && npm run format:test && npm run coverage",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist --access public",
     "format": "prettier **/*.{ts,json,md} --write",
     "format:test": "prettier **/*.{ts,json,md} --list-different",

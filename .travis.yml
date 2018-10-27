@@ -7,6 +7,6 @@ install:
   - npm install codecov -g
   - npm ci
 script:
-  - npm run ci
+  - npm test
 after_success:
-  - codecov
+  - npm run coverage
