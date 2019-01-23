@@ -40,7 +40,7 @@
     "@angular/core": "^7.0.0",
     "@angular/cli": "^7.0.0",
     "rxjs": "^6.3.0",
-    "typescript": "~3.1.0"
+    "typescript": "^3.1.0"
   },
   "devDependencies": {
     "@angular-devkit/core": "^7.0.3",
@@ -64,7 +64,7 @@
     "ts-node": "^7.0.1",
     "tsickle": "~0.27.0",
     "tslint": "^5.9.1",
-    "typescript": "~3.1.0",
+    "typescript": "^3.1.0",
     "zone.js": "^0.8.26"
   },
   "keywords": [
