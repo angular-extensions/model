@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.1.1"></a>
+## [7.1.1](https://github.com/angular-extensions/model/compare/v7.1.0...v7.1.1) (2019-01-23)
+
+
+
 <a name="7.1.0"></a>
 # [7.1.0](https://github.com/angular-extensions/model/compare/v7.0.1...v7.1.0) (2019-01-23)
 
