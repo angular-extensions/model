@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="7.1.2"></a>
+## [7.1.2](https://github.com/angular-extensions/model/compare/v7.1.1...v7.1.2) (2019-02-23)
+
+
+### Bug Fixes
+
+* **dependencies:** npm vulnerability fix ([42d8af6](https://github.com/angular-extensions/model/commit/42d8af6))
+
+
+
 <a name="7.1.1"></a>
 ## [7.1.1](https://github.com/angular-extensions/model/compare/v7.1.0...v7.1.1) (2019-01-23)
 
