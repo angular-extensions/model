@@ -15,13 +15,12 @@ export class Model<T> {
   ) {
     this._data = new BehaviorSubject(initialData);
     this.data$ = this._data.asObservable().pipe(
-      map(
-        (data: T) =>
-          immutable
-            ? clone
-              ? clone(data)
-              : JSON.parse(JSON.stringify(data))
-            : data
+      map((data: T) =>
+        immutable
+          ? clone
+            ? clone(data)
+            : JSON.parse(JSON.stringify(data))
+          : data
       ),
       sharedSubscription ? shareReplay(1) : map((data: T) => data)
     );

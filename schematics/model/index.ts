@@ -1,3 +1,5 @@
+import * as ts from 'typescript';
+
 import {
   apply,
   branchAndMerge,
@@ -14,27 +16,25 @@ import {
   Tree,
   url
 } from '@angular-devkit/schematics';
-import * as ts from 'typescript';
 import { strings } from '@angular-devkit/core';
-import { getWorkspace } from '@schematics/angular/utility/config';
+
 import {
   buildDefaultPath,
   getProject
 } from '@schematics/angular/utility/project';
-import { buildRelativePath } from '@schematics/angular/utility/find-module';
-import { addProviderToModule } from '@schematics/angular/utility/ast-utils';
 import { parseName } from '@schematics/angular/utility/parse-name';
+import { getWorkspace } from '@schematics/angular/utility/config';
 import { applyLintFix } from '@schematics/angular/utility/lint-fix';
 import { InsertChange } from '@schematics/angular/utility/change';
+import { buildRelativePath } from '@schematics/angular/utility/find-module';
+import { addProviderToModule } from '@schematics/angular/utility/ast-utils';
 
 import { Schema as ModelServiceOptions } from './schema';
 
 export default function(options: ModelServiceOptions): Rule {
   return (host: Tree, _context: SchematicContext) => {
     const workspace = getWorkspace(host);
-    const projectName = options.project
-      ? options.project
-      : Object.keys(workspace.projects)[0];
+    const projectName = options.project || Object.keys(workspace.projects)[0];
     const project = getProject(host, projectName);
 
     if (options.path === undefined) {

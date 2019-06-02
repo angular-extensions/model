@@ -4,7 +4,10 @@ import {
   SchematicTestRunner,
   UnitTestTree
 } from '@angular-devkit/schematics/testing';
-import { Schema as ApplicationOptions } from '@schematics/angular/application/schema';
+import {
+  Schema as ApplicationOptions,
+  Style
+} from '@schematics/angular/application/schema';
 import { Schema as WorkspaceOptions } from '@schematics/angular/workspace/schema';
 
 import packageJson from '../../package.json';
@@ -22,7 +25,7 @@ const appOptions: ApplicationOptions = {
   inlineStyle: false,
   inlineTemplate: false,
   routing: false,
-  style: 'css',
+  style: Style.Css,
   skipTests: false,
   skipPackageJson: false
 };
@@ -38,38 +41,44 @@ const version = packageJson.version;
 let appTree: UnitTestTree;
 
 describe('Schematic: ng-add', () => {
-  beforeEach(() => {
-    appTree = runner.runExternalSchematic(
-      '@schematics/angular',
-      'workspace',
-      workspaceOptions
-    );
-    appTree = runner.runExternalSchematic(
-      '@schematics/angular',
-      'application',
-      appOptions,
-      appTree
-    );
+  beforeEach(async () => {
+    appTree = await runner
+      .runExternalSchematicAsync(
+        '@schematics/angular',
+        'workspace',
+        workspaceOptions
+      )
+      .toPromise();
+    appTree = await runner
+      .runExternalSchematicAsync(
+        '@schematics/angular',
+        'application',
+        appOptions,
+        appTree
+      )
+      .toPromise();
   });
 
-  it('should add @angular-extensions/model to dependencies in package.json', () => {
+  it('should add @angular-extensions/model to dependencies in package.json', async () => {
     const options = { ...defaultOptions };
 
-    const tree = runner.runSchematic('ng-add', options, appTree);
+    const tree = await runner
+      .runSchematicAsync('ng-add', options, appTree)
+      .toPromise();
     const content = tree.readContent('/package.json');
     const contentAsObject = JSON.parse(content);
-    assert.equal(runner.tasks.length, 1);
+    assert.strictEqual(runner.tasks.length, 1);
     assert(content.includes(`"@angular-extensions/model": "^${version}"`));
-    assert.equal(
+    assert.strictEqual(
       contentAsObject.dependencies['@angular-extensions/model'],
       `^${version}`
     );
   });
 
-  it('should respect skipInstall flag', () => {
+  it('should respect skipInstall flag', async () => {
     const options = { ...defaultOptions, skipInstall: true };
 
-    const tree = runner.runSchematic('ng-add', options, appTree);
-    assert.equal(runner.tasks.length, 0);
+    runner.runSchematicAsync('ng-add', options, appTree);
+    assert.strictEqual(runner.tasks.length, 0);
   });
 });

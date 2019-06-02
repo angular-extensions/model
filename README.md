@@ -51,10 +51,10 @@ multiple model support and immutable data exposed as RxJS Observable.
       template: `
         <!-- template subscription to todos using async pipe -->
         <ng-container *ngIf="todoService.todos$ | async as todos">
-          <h1>Todos ({{todos.length}})</h1>
+          <h1>Todos ({{ todos.length }})</h1>
           <ul>
             <li *ngFor="let todo of todos">
-              {{todo.prop}}
+              {{ todo.prop }}
             </li>
           </ul>
           <button (click)="addTodo()">Add todo</button>
