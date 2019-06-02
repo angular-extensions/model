@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.0.0"></a>
+# [8.0.0](https://github.com/angular-extensions/model/compare/v7.1.2...v8.0.0) (2019-06-02)
+
+
+### Features
+
+* **dependencies:** upgrade to Angular 8, Typescript 3.4, RxJs 3.4... ([bdc474d](https://github.com/angular-extensions/model/commit/bdc474d))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** - peer depenencies updated to work in Angular 8 ecosystem
+
+- rework schematics tests to follow new async APIs
+- docs cleanup
+- formatting based on latest prettier
+
+
+
 <a name="7.1.2"></a>
 ## [7.1.2](https://github.com/angular-extensions/model/compare/v7.1.1...v7.1.2) (2019-02-23)
 
