@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.1.0"></a>
+# [8.1.0](https://github.com/angular-extensions/model/compare/v8.0.0...v8.1.0) (2019-07-19)
+
+
+### Features
+
+* **model:** add factory function, shareReplay perf, tests ([767a7fd](https://github.com/angular-extensions/model/commit/767a7fd))
+
+
+
 <a name="8.0.0"></a>
 # [8.0.0](https://github.com/angular-extensions/model/compare/v7.1.2...v8.0.0) (2019-06-02)
 
