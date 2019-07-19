@@ -10,7 +10,7 @@
     "build": "npm run clean && npm run lib:build && npm run schm:build",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "release": "npm run test && standard-version && git push --follow-tags origin master && npm run build && npm publish ./dist --access public",
-    "format": "prettier **/*.{ts,json,md} --write",
+    "format:write": "prettier **/*.{ts,json,md} --write",
     "format:test": "prettier **/*.{ts,json,md} --list-different",
     "lib:build": "ng-packagr -p package.json",
     "lib:test": "mocha lib/model/model.test.ts --require ts-node/register",

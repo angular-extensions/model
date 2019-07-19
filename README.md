@@ -96,6 +96,7 @@ Multiple model factories are provided out of the box to support different use ca
 - `createMutable(initialData: T): Model<T>` - create model with no immutability guarantees (you have to make sure that model consumers don't mutate and corrupt model state) but much more performance because whole cloning step is skipped
 - `createMutableWithSharedSubscription(initialData: T): Model<T>` - gain even more performance by skipping both immutability and sharing subscription between all consumers (eg situation in which many components are subscribed to single model)
 - `createWithCustomClone(initialData: T, clone: (data: T) => T)` - create immutable model by passing your custom clone function (`JSON` cloning doesn't support properties containing function or regex so custom cloning functionality might be needed)
+- `createWithConfig(config)` - create model by passing in config object with values of all configuration properties (`initialData: T`, `immutable: boolean`, `sharedSubscription: boolean`, `clone: (data: T) => T`)
 
 ## Model Schematics API
 

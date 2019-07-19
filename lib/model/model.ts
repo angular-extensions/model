@@ -22,7 +22,9 @@ export class Model<T> {
             : JSON.parse(JSON.stringify(data))
           : data
       ),
-      sharedSubscription ? shareReplay(1) : map((data: T) => data)
+      sharedSubscription
+        ? shareReplay({ bufferSize: 1, refCount: true })
+        : map((data: T) => data)
     );
   }
 
@@ -66,5 +68,15 @@ export class ModelFactory<T> {
 
   createWithCustomClone(initialData: T, clone: (data: T) => T) {
     return new Model<T>(initialData, true, false, clone);
+  }
+
+  createWithConfig(config: {
+    initialData: T;
+    immutable: boolean;
+    sharedSubscription: boolean;
+    clone: (data: T) => T;
+  }) {
+    const { initialData, immutable, sharedSubscription, clone } = config;
+    return new Model<T>(initialData, immutable, sharedSubscription, clone);
   }
 }
