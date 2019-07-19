@@ -9,14 +9,14 @@ export class Model<T> {
 
   constructor(
     initialData: any,
-    immutable: boolean,
+    private immutable: boolean,
     sharedSubscription: boolean,
-    clone?: (data: T) => T
+    private clone?: (data: T) => T
   ) {
     this._data = new BehaviorSubject(initialData);
     this.data$ = this._data.asObservable().pipe(
       map((data: T) =>
-        immutable
+        this.immutable
           ? clone
             ? clone(data)
             : JSON.parse(JSON.stringify(data))
@@ -27,11 +27,24 @@ export class Model<T> {
   }
 
   get(): T {
-    return this._data.getValue();
+    const data = this._data.getValue();
+    return this.immutable
+      ? this.clone
+        ? this.clone(data)
+        : JSON.parse(JSON.stringify(data))
+      : data;
   }
 
   set(data: T) {
-    this._data.next(data);
+    if (this.immutable) {
+      const clone = this.clone
+        ? this.clone(data)
+        : JSON.parse(JSON.stringify(data));
+
+      this._data.next(clone);
+    } else {
+      this._data.next(data);
+    }
   }
 }
 
