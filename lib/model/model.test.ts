@@ -6,6 +6,45 @@ import { ModelFactory } from './model';
 const modelFactory = new ModelFactory<TestModel>();
 
 describe('Model', () => {
+  it('should be an immutable array', () => {
+    const factory: ModelFactory<TestModel[]> = new ModelFactory<TestModel[]>();
+
+    const initial: TestModel[] = [];
+    const store = factory.create(initial);
+
+    const initialState = store.get();
+    initialState.push({ value: 'updated' });
+
+    assert.equal(store.get().length, 0);
+  });
+
+  it('should be an immutable array after set', () => {
+    const factory: ModelFactory<TestModel[]> = new ModelFactory<TestModel[]>();
+
+    const initial: TestModel[] = [];
+    const store = factory.create(initial);
+
+    const updateArray = [{ value: 'first element' }];
+    store.set(updateArray);
+
+    updateArray.push({ value: '2nd element' });
+    assert.equal(store.get().length, 1);
+  });
+
+  it('should be immutable array on sub', () => {
+    const factory: ModelFactory<TestModel[]> = new ModelFactory<TestModel[]>();
+
+    const initial: TestModel[] = [];
+    const store = factory.create(initial);
+
+    const initialState = store.get();
+    initialState.push({ value: 'updated' });
+
+    store.data$.subscribe(v => {
+      assert.equal(store.get().length, 0);
+    });
+  });
+
   it('should expose model data in observable', () => {
     const model = modelFactory.create({ value: 'test' });
 
