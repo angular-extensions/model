@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="10.0.1"></a>
+## [10.0.1](https://github.com/angular-extensions/model/compare/v10.0.0...v10.0.1) (2020-07-30)
+
+
+
 <a name="10.0.0"></a>
 # [10.0.0](https://github.com/angular-extensions/model/compare/v8.1.0...v10.0.0) (2020-07-30)
 
