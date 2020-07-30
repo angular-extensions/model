@@ -20,10 +20,9 @@ import { strings } from '@angular-devkit/core';
 
 import {
   buildDefaultPath,
-  getProject
-} from '@schematics/angular/utility/project';
+  getWorkspace
+} from '@schematics/angular/utility/workspace';
 import { parseName } from '@schematics/angular/utility/parse-name';
-import { getWorkspace } from '@schematics/angular/utility/config';
 import { applyLintFix } from '@schematics/angular/utility/lint-fix';
 import { InsertChange } from '@schematics/angular/utility/change';
 import { buildRelativePath } from '@schematics/angular/utility/find-module';
@@ -31,17 +30,18 @@ import { addProviderToModule } from '@schematics/angular/utility/ast-utils';
 
 import { Schema as ModelServiceOptions } from './schema';
 
-export default function(options: ModelServiceOptions): Rule {
-  return (host: Tree, _context: SchematicContext) => {
-    const workspace = getWorkspace(host);
-    const projectName = options.project || Object.keys(workspace.projects)[0];
-    const project = getProject(host, projectName);
+export default function(options: ModelServiceOptions): any {
+  return async (host: Tree, _context: SchematicContext) => {
+    const workspace = await getWorkspace(host);
+    const projectName =
+      options.project || workspace.projects.keys().next().value;
+    const project = workspace.projects.get(projectName);
 
-    if (options.path === undefined) {
+    if (options.path === undefined && project) {
       options.path = buildDefaultPath(project);
     }
 
-    const parsedPath = parseName(options.path, options.name);
+    const parsedPath = parseName(options.path as string, options.name);
     options.name = parsedPath.name;
     options.path = parsedPath.path;
 
@@ -63,7 +63,7 @@ export default function(options: ModelServiceOptions): Rule {
         ])
       ),
       options.lintFix ? applyLintFix(options.path) : noop()
-    ])(host, _context);
+    ]);
   };
 }
 

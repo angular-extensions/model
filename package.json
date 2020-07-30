@@ -16,7 +16,7 @@
     "lib:test": "mocha lib/model/model.test.ts --require ts-node/register",
     "lib:watch": "npm run lib:test -- --watch-extensions ts --watch",
     "schm:build": "tsc -p tsconfig.schematics.json && cpx schematics/**/{collection.json,schema.json,files/**} dist/schematics",
-    "schm:test": "mocha schematics/**/*.test.ts --require ts-node/register",
+    "schm:test": "mocha schematics/**/*.test.ts --require ts-node/register --timeout 10000",
     "schm:watch": "npm run schm:test -- --watch-extensions ts --watch"
   },
   "nyc": {
@@ -31,41 +31,40 @@
   },
   "ngPackage": {
     "lib": {
-      "entryFile": "lib/model/model.ts",
-      "comments": "none"
+      "entryFile": "lib/model/model.ts"
     }
   },
   "schematics": "./schematics/collection.json",
   "peerDependencies": {
-    "@angular/core": "^8.0.0",
-    "@angular/cli": "^8.0.0",
-    "rxjs": "^6.4.0",
-    "typescript": "^3.4.0"
+    "@angular/core": "^10.0.0",
+    "@angular/cli": "^10.0.0",
+    "rxjs": "^6.6.0",
+    "typescript": "~3.9.0"
   },
   "devDependencies": {
-    "@angular-devkit/core": "^8.0.0",
-    "@angular-devkit/schematics": "^8.0.0",
-    "@angular/compiler": "^8.0.0",
-    "@angular/compiler-cli": "^8.0.0",
-    "@angular/core": "^8.0.0",
-    "@schematics/angular": "^8.0.0",
+    "@angular-devkit/core": "^10.0.0",
+    "@angular-devkit/schematics": "^10.0.0",
+    "@angular/compiler": "^10.0.0",
+    "@angular/compiler-cli": "^10.0.0",
+    "@angular/core": "^10.0.0",
+    "@schematics/angular": "^10.0.0",
     "@types/mocha": "^5.2.0",
-    "@types/node": "^10.0.0",
+    "@types/node": "^12.0.0",
     "@types/sinon": "^4.3.1",
     "cpx": "^1.5.0",
     "mocha": "^5.1.1",
-    "ng-packagr": "^5.2.0",
+    "ng-packagr": "^10.0.0",
     "nyc": "^14.1.1",
     "prettier": "^1.14.3",
-    "rxjs": "~6.4.0",
+    "rxjs": "~6.6.0",
     "sinon": "^4.5.0",
     "source-map-support": "^0.5.9",
     "standard-version": "^4.3.0",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.10.0",
     "tsickle": "~0.27.0",
-    "tslint": "^5.9.1",
-    "typescript": "~3.4.0",
-    "zone.js": "^0.8.26"
+    "tslint": "^6.0.0",
+    "typescript": "~3.9.0",
+    "zone.js": "^0.9.1"
   },
   "keywords": [
     "angular",
