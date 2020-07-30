@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="10.0.0"></a>
+# [10.0.0](https://github.com/angular-extensions/model/compare/v8.1.0...v10.0.0) (2020-07-30)
+
+
+### Features
+
+* **dependencies:** upgrade to Angular 10, Typescript 3.9, RxJs 3.6 ([93195ca](https://github.com/angular-extensions/model/commit/93195ca))
+
+
+### BREAKING CHANGES
+
+* **dependencies:** - peer dependencies updated to work in Angular 10 ecosystem
+
+- adjust schematics to use later APIs
+
+
+
 <a name="8.1.0"></a>
 # [8.1.0](https://github.com/angular-extensions/model/compare/v8.0.0...v8.1.0) (2019-07-19)
 
