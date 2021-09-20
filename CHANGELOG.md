@@ -1,6 +1,17 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [11.0.0](https://github.com/angular-extensions/model/compare/v10.0.1...v11.0.0) (2021-09-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* **dependencies:** - peer dependencies updated to work in Angular 11 ecosystem
+
+### Features
+
+* **dependencies:** upgrade to Angular 11, Typescript 4.1 ([6fc5a78](https://github.com/angular-extensions/model/commit/6fc5a78ad748485a9e0d9ae776ec9072ef3bae8a))
 
 <a name="10.0.1"></a>
 ## [10.0.1](https://github.com/angular-extensions/model/compare/v10.0.0...v10.0.1) (2020-07-30)
