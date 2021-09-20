@@ -30,7 +30,7 @@ import { addProviderToModule } from '@schematics/angular/utility/ast-utils';
 
 import { Schema as ModelServiceOptions } from './schema';
 
-export default function(options: ModelServiceOptions): any {
+export default function (options: ModelServiceOptions): any {
   return async (host: Tree, _context: SchematicContext) => {
     const workspace = await getWorkspace(host);
     const projectName =
@@ -46,7 +46,7 @@ export default function(options: ModelServiceOptions): any {
     options.path = parsedPath.path;
 
     const templateSource = apply(url('./files'), [
-      options.spec ? noop() : filter(path => !path.endsWith('.spec.ts')),
+      options.spec ? noop() : filter((path) => !path.endsWith('.spec.ts')),
       template({
         ...strings,
         'if-flat': (s: string) => (options.flat ? '' : s),

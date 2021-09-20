@@ -9,7 +9,7 @@ describe('Model', () => {
   it('should expose model data in observable', () => {
     const model = modelFactory.create({ value: 'test' });
 
-    model.data$.subscribe(data =>
+    model.data$.subscribe((data) =>
       assert.deepStrictEqual(data, { value: 'test' })
     );
   });
@@ -31,7 +31,7 @@ describe('Model', () => {
   it('should use immutable data in exposed observable by default', () => {
     const model = modelFactory.create({ value: 'test' });
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       data.value = 'changed';
       assert.deepStrictEqual(model.get(), { value: 'test' });
     });
@@ -43,7 +43,7 @@ describe('Model', () => {
     const modelData = model.get();
     modelData.value = 'changed';
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'test' });
     });
   });
@@ -56,7 +56,7 @@ describe('Model', () => {
 
     changedData.value = 'changed even more';
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'changed' });
     });
   });
@@ -64,7 +64,7 @@ describe('Model', () => {
   it('should use mutable data in exposed observable when configured', () => {
     const model = modelFactory.createMutable({ value: 'test' });
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       data.value = 'changed';
       assert.deepStrictEqual(model.get(), { value: 'changed' });
     });
@@ -76,7 +76,7 @@ describe('Model', () => {
     const modelData = model.get();
     modelData.value = 'changed';
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'changed' });
     });
   });
@@ -89,7 +89,7 @@ describe('Model', () => {
 
     changedData.value = 'changed even more';
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'changed even more' });
     });
   });
@@ -137,10 +137,10 @@ describe('Model', () => {
 
     model2.set({ value: 'changed' });
 
-    model1.data$.subscribe(data =>
+    model1.data$.subscribe((data) =>
       assert.deepStrictEqual(data, { value: 'test1' })
     );
-    model2.data$.subscribe(data =>
+    model2.data$.subscribe((data) =>
       assert.deepStrictEqual(data, { value: 'changed' })
     );
   });
@@ -148,11 +148,11 @@ describe('Model', () => {
   it('should not share subscription by default', () => {
     const model = modelFactory.create({ value: 'test' });
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       data.value = 'changed';
       assert.deepStrictEqual(data, { value: 'changed' });
     });
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'test' });
     });
   });
@@ -162,11 +162,11 @@ describe('Model', () => {
       value: 'test'
     });
 
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       data.value = 'changed';
       assert.deepStrictEqual(data, { value: 'changed' });
     });
-    model.data$.subscribe(data => {
+    model.data$.subscribe((data) => {
       assert.deepStrictEqual(data, { value: 'changed' });
     });
   });
