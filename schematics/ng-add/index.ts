@@ -5,7 +5,7 @@ import { addPackageToPackageJson, getLibraryVersion } from '../utils';
 
 import { Schema as NgAddOptions } from './schema';
 
-export default function(options: NgAddOptions): Rule {
+export default function (options: NgAddOptions): Rule {
   return (host: Tree, context: SchematicContext) => {
     const version = getLibraryVersion();
     addPackageToPackageJson(host, '@angular-extensions/model', `^${version}`);
