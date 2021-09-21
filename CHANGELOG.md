@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [12.0.0](https://github.com/angular-extensions/model/compare/v11.0.0...v12.0.0) (2021-09-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **dependencies:** - peer dependencies updated to work in Angular 12 ecosystem
+
+### Features
+
+* **dependencies:** upgrade to Angular 12, Typescript 4.3 ([e03d5a2](https://github.com/angular-extensions/model/commit/e03d5a213a87f5dbcecdbc0f534dd9f0609fbd39))
+
+
+### Bug Fixes
+
+* **workspace:** ci config ([70fa968](https://github.com/angular-extensions/model/commit/70fa9683ae7a4a821031115dc66669a7218a99c7))
+* **workspace:** ci config ([c9634b1](https://github.com/angular-extensions/model/commit/c9634b14bf0fe5fa4da5d90f8fd297374b5fdcb7))
+
 ## [11.0.0](https://github.com/angular-extensions/model/compare/v10.0.1...v11.0.0) (2021-09-20)
 
 
