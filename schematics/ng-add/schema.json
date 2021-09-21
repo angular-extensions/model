@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "@angular-extensions/model/ng-add",
+  "$id": "@angular-extensions/model/ng-add",
   "title": "Add Angular model to the project",
   "description": "NOTE: Does not work in the --dry-run mode",
   "type": "object",
