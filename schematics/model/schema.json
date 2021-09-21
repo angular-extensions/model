@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "@angular-extensions/model/model",
+  "$id": "@angular-extensions/model/model",
   "title": "Generates model service",
   "type": "object",
   "properties": {
